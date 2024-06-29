@@ -1,0 +1,479 @@
+/* flex-flow: column in order to have an horizontal layout on cellphone resolution 
+
+relative on img and absolute on text as an idea to have text within img*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+header,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: teal;
+  min-height: 100px;
+  font-size: 50px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: white;
+}
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+section {
+  background: rgb(51, 51, 51);
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+#titleAndPContainer {
+  text-align: center;
+  color: white;
+}
+#titleAndPContainer p {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 20px;
+}
+#titleAndPContainer h1 {
+  font-size: 35px;
+  letter-spacing: 2px;
+  transition: all 1.2s ease-out;
+  width: 25%;
+  margin: auto;
+}
+#title:hover {
+  cursor: pointer;
+}
+
+.descriptionContainer {
+  margin: auto;
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+.descriptionContainer h3 {
+  text-align: center;
+  color: white;
+  z-index: 4;
+  position: relative;
+}
+
+.positiveAndNegativeButtons {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.positiveAndNegativeButtons button {
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: background 1s ease;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+  width: 15%;
+  text-align: center;
+}
+.positiveAndNegativeButtons button:hover {
+  background: teal;
+}
+
+.backgroundColorSelector {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.backgroundColorSelector button {
+  width: 15%;
+  height: 50px;
+  margin: 15px;
+  border-radius: 5px;
+  transition: background 1s ease, box-shadow 1s ease;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+.backgroundColorSelector button:hover {
+  background: cyan;
+  box-shadow: -10px -10px 0px 0px cyan, -20px -20px 0px 0px rgb(60, 172, 172);
+}
+
+nav {
+  margin: auto;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+}
+.h4HOrVTitlesContainer {
+  width: 20%;
+  background: teal;
+  margin: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+ul li {
+  margin-bottom: 15px;
+}
+ul li a {
+  text-decoration: none;
+  color: rgb(228, 235, 172);
+}
+
+#imgContainer {
+  display: flex;
+  margin: auto;
+  margin-top: 25px;
+  justify-content: center;
+}
+#imgContainer:hover a:nth-child(1) {
+  transform: rotate(-10deg);
+}
+#imgContainer:hover a:nth-child(2) {
+  transform: rotate(0);
+  margin-left: -200px;
+}
+#imgContainer:hover a:nth-child(3) {
+  transform: rotate(10deg);
+  margin-left: -200px;
+}
+#imgContainer a {
+  transition: all 1s ease-out;
+  width: 500px;
+}
+#imgContainer a:nth-child(1) {
+  z-index: 3;
+  transform: rotate(-5deg);
+}
+#imgContainer a:nth-child(2) {
+  z-index: 2;
+  margin-left: -450px;
+  transform: rotate(0);
+}
+#imgContainer a:nth-child(3) {
+  z-index: 1;
+  margin-left: -450px;
+  transform: rotate(5deg);
+}
+#img,
+#img1,
+#img2 {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+  min-height: 300px;
+}
+
+#formTest {
+  width: 20%;
+  background: rgb(36, 36, 36);
+  margin: auto;
+  border-radius: 30px;
+  padding: 30px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+#formTest input:nth-child(1),
+#formTest input:nth-child(2) {
+  display: block;
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+input[type="submit"] {
+  transition: background 1s ease;
+  display: block;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+input[type="submit"]:hover {
+  background: teal;
+}
+
+.pngImgsContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+.pngImgsContainer a {
+  margin: 15px;
+}
+.pngImgsContainer a:nth-child(1),
+.pngImgsContainer a:nth-child(3) {
+  visibility: hidden;
+}
+.pngImgsContainer a img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+}
+#toogleModeButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
+}
+
+#toggleModeButton {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
+  background-size: contain;
+  background-image: url(../img/white-mode.png);
+}
+
+#flexMainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#flexH3 {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+#flexMain {
+  width: 450px;
+  height: 350px;
+  display: flex;
+  border-radius: 15px;
+  margin: 50px;
+}
+#flexMain div {
+  flex: auto;
+  width: 30px;
+  transition: width 1s ease-out;
+}
+#flexMain div:nth-child(1) {
+  background: rgb(228, 235, 172);
+}
+#flexMain div:nth-child(2) {
+  background: rgb(46, 46, 46);
+}
+#flexMain div:nth-child(3) {
+  background: teal;
+}
+#flexMain div:nth-child(4) {
+  background: pink;
+}
+#flexMain div:hover {
+  width: 200px;
+}
+
+.circleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.circleContainer div {
+  background: rgb(228, 235, 172);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  transition: all 0.7s ease-out;
+}
+.circleContainer div:hover {
+  width: 300px;
+  height: 300px;
+}
+
+.simulacroContainer {
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+#flexHeader,
+#flexFooter {
+  width: 100%;
+  background: teal;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+}
+#navArticleAsideContainer {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+#navArticleAsideContainer div {
+  color: white;
+  border-radius: 15px;
+  margin: 15px;
+  text-align: center;
+  height: 550px;
+}
+#navArticleAsideContainer div:nth-child(1) {
+  background: rgb(77, 77, 77);
+  width: 20%;
+}
+#navArticleAsideContainer div:nth-child(2) {
+  background: rgb(228, 235, 172);
+  width: 60%;
+}
+#navArticleAsideContainer div:nth-child(3) {
+  background: pink;
+  width: 20%;
+}
+
+#listaResponsive {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+.individuallist {
+  width: 250px;
+  flex-grow: 1;
+  margin: 1em;
+  border-radius: 15px;
+  padding: 15px;
+  position: relative;
+  padding-bottom: 40px;
+}
+.individuallist:nth-child(1) {
+  background: rgb(153, 153, 153);
+}
+.individuallist:nth-child(2) {
+  background: rgb(122, 40, 40);
+}
+.individuallist:nth-child(3) {
+  background: rgb(187, 124, 42);
+}
+.individuallist:nth-child(4) {
+  background: rgb(134, 179, 52);
+}
+.individuallist:nth-child(5) {
+  background: rgb(221, 219, 79);
+}
+#listaResponsive span {
+  position: absolute;
+  bottom: 0;
+  color: white;
+}
+
+.calculatorContainer {
+  margin: auto;
+  margin-top: 50px;
+  background: rgb(32, 32, 32);
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+}
+#display {
+  background: rgb(43, 43, 43);
+  height: 100px;
+  width: 100%;
+  border-radius: 15px;
+  color: white;
+  font-size: 60px;
+  padding: 10px;
+  border: 0;
+  overflow: hidden;
+}
+#buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px;
+}
+#buttonsContainer button {
+  border-radius: 100%;
+  background: rgb(70, 70, 70);
+  height: 60px;
+  color: white;
+  font-size: 25px;
+  border: none;
+}
+#buttonsContainer button:hover {
+  background: rgb(100, 100, 100);
+}
+#buttonsContainer button:active {
+  background: rgb(148, 148, 148);
+}
+#buttonsContainer .calculatorSpecialSymbols {
+  background: orange;
+}
+#buttonsContainer .calculatorSpecialSymbols:hover {
+  background: rgb(255, 189, 66);
+}
+#buttonsContainer .calculatorSpecialSymbols:active {
+  background: rgb(255, 216, 144);
+}
+
+@media all and (max-width: 640px) {
+  #imgContainer a:nth-child(1) {
+    transform: rotate(0);
+  }
+  #imgContainer a:nth-child(2) {
+    margin-left: -450px;
+    transform: rotate(0);
+  }
+  #imgContainer a:nth-child(3) {
+    margin-left: -450px;
+    transform: rotate(0);
+  }
+
+  .backgroundColorSelector {
+    width: 100%;
+  }
+
+  #formTest {
+    width: 80%;
+  }
+
+  #navArticleAsideContainer {
+    flex-flow: column;
+  }
+  #navArticleAsideContainer div:nth-child(1) {
+    width: 100%;
+  }
+  #navArticleAsideContainer div:nth-child(2) {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #navArticleAsideContainer div:nth-child(3) {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #navArticleAsideContainer div {
+    height: 100px;
+    margin: 0px;
+  }
+
+  #listaResponsive {
+    width: 100%;
+  }
+  .individuallist {
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-color: rgb(56, 56, 56) grey;
+    max-height: 300px;
+    width: 150px;
+  }
+  #listaResponsive span {
+    position: sticky;
+    top: 0;
+    background: rgba(58, 58, 58, 0.274);
+    border-radius: 5px;
+  }
+}

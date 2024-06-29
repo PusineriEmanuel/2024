@@ -1,0 +1,48 @@
+body {
+  background: grey !important ;
+}
+#contenedor {
+  background: rgb(167, 184, 142);
+  text-align: center;
+  height: 800px;
+  border-radius: 15px;
+}
+
+header,
+section,
+footer {
+  height: 200px;
+}
+header {
+  background: rgb(114, 39, 39);
+}
+header div:nth-child(1) {
+  background: rgb(255, 166, 0);
+}
+header div:nth-child(2) {
+  background: rgb(167, 140, 131);
+}
+section {
+  background: rgb(128, 103, 57);
+}
+section div:nth-child(1) {
+  background-color: grey;
+}
+section div:nth-child(2) {
+  background-color: rgb(88, 88, 88);
+}
+section div:nth-child(3) {
+  background: rgb(65, 64, 64);
+}
+section div:nth-child(4) {
+  background: rgb(31, 30, 30);
+}
+footer {
+  background: peru;
+}
+footer div:nth-child(1) {
+  background: rgb(106, 106, 185);
+}
+footer div:nth-child(2) {
+  background: rgb(54, 54, 116);
+}

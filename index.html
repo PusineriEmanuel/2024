@@ -1,0 +1,321 @@
+<!-- <title>Ejemplo 2</title> -->
+
+<!--     <style type="text/css">
+  input:valid,
+  textarea:valid {
+    background: green;
+  }
+  input:invalid {
+    background: red;
+  }
+</style> -->
+
+<!--    <section>
+  <form name="formulario" method="post" action="#">
+    Nombre de usuario. Campo obligatorio, entre 5-40 carácteres
+    <label> Usuario: </label>
+    <input
+      type="text"
+      name="nombre"
+      placeholder="Por ejemplo, Juan"
+      minlength="5"
+      maxlength="40"
+      required
+    />
+     Contraseña. Campo obligatorio, mínimo 11 carácteres
+    <label>Password: </label>
+    <input
+      type="password"
+      name="pass"
+      placeholder="Contraseña"
+      minlength="11"
+      required
+    />
+  </form>
+</section> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/css.css" />
+    <link href="css/lightbox.min.css" rel="stylesheet" />
+    <title>EJERCICIOS 4.11.24</title>
+  </head>
+
+  <body>
+    <header>HEADER</header>
+
+    <section id="sectionBackground">
+      <div id="titleAndPContainer">
+        <h1 id="title">TITLE</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, modi
+          facilis ab quam architecto animi fugit quo cumque quia culpa
+          voluptates. Dignissimos, alias iusto commodi fugiat qui tempora
+          numquam modi. Ipsum dolor sit amet consectetur adipisicing elit. Autem
+          fugit, voluptate tenetur ullam qui dolorum consequuntur ex provident,
+          id labore est officia! Modi consectetur enim dolor, accusamus ab vitae
+          unde. Sit amet consectetur adipisicing elit. Assumenda similique
+          voluptatum ipsum facilis a dolor consequuntur, ipsa dignissimos?
+          Deserunt ex quos voluptate labore veniam praesentium, deleniti sint ad
+          velit fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Pariatur delectus dolore voluptates voluptate sapiente aut officia
+          odio eaque, magnam earum minus ab ut iure tempora amet? Et amet
+          recusandae ea! Lorem ipsum dolor, sit amet consectetur adipisicing
+          elit.
+        </p>
+      </div>
+      <div class="descriptionContainer">
+        <h3>Change title size with them!</h3>
+      </div>
+      <div class="positiveAndNegativeButtons">
+        <button onclick="fontSize(0)">+</button>
+        <button onclick="fontSize()">-</button>
+      </div>
+
+      <div class="descriptionContainer">
+        <h3>Customize background color</h3>
+      </div>
+      <div class="backgroundColorSelector">
+        <button onclick="backgroundColor(0)">Choose One</button>
+        <button onclick="backgroundColor(1)">Cyan</button>
+        <button onclick="backgroundColor()">Reset</button>
+      </div>
+
+      <div class="descriptionContainer">
+        <h3>They appear and disappear when clicked!</h3>
+      </div>
+      <nav>
+        <ul>
+          <div class="h4HOrVTitlesContainer">
+            <h4 onclick="HiddenOrVisible('frontend')">
+              Cursos Desarrollo Frontend
+            </h4>
+          </div>
+          <ul id="frontend">
+            <li><a href="">Curso HTML5 y CSS3</a></li>
+            <li><a href="">Curso Javascript</a></li>
+          </ul>
+
+          <div class="h4HOrVTitlesContainer">
+            <h4 onclick="HiddenOrVisible('backend')">
+              Cursos Desarrollo Backend
+            </h4>
+          </div>
+          <ul id="backend">
+            <li><a href="">Curso PHP</a></li>
+            <li><a href="">Curso MySQL</a></li>
+          </ul>
+        </ul>
+      </nav>
+
+      <div class="descriptionContainer">
+        <h3>Images with links that change over time</h3>
+      </div>
+      <div id="imgContainer">
+        <a href="" id="imgLink" target="_blank">
+          <img src="" alt="" id="img"
+        /></a>
+
+        <a href="" id="imgLink1" target="_blank">
+          <img src="" alt="" id="img1"
+        /></a>
+
+        <a href="" id="imgLink2" target="_blank">
+          <img src="" alt="" id="img2"
+        /></a>
+      </div>
+
+      <div class="descriptionContainer">
+        <h3>Functional Form</h3>
+      </div>
+      <form action="" id="formTest">
+        <input
+          type="email"
+          maxlength="30"
+          placeholder="Correo Electrónico"
+          id="usuario"
+          required
+        />
+        <input
+          type="password"
+          maxlength="16"
+          placeholder="Contraseña"
+          id="clave"
+          required
+        />
+        <input type="submit" />
+      </form>
+
+      <div class="descriptionContainer">
+        <h3>Jquerry Library: Lightbox</h3>
+      </div>
+      <div class="pngImgsContainer">
+        <a href="img/img1.jpg" data-lightbox="imgPNG1" id="imgPng"
+          ><img src="img/img1.jpg" alt=""
+        /></a>
+        <a href="img/imgPNG.png" data-lightbox="imgPNG1" id="imgPng"
+          ><img src="img/imgPNG.png" alt=""
+        /></a>
+        <a href="img/img1.jpg" data-lightbox="imgPNG1" id="imgPng"
+          ><img src="img/img1.jpg" alt=""
+        /></a>
+      </div>
+
+      <div class="descriptionContainer">
+        <h3>DARK MODE!!</h3>
+      </div>
+      <div id="toogleModeButtonContainer">
+        <button id="toggleModeButton" onclick="darkModeToggle()"></button>
+      </div>
+
+      <h3 id="flexH3">FLEX CONTENT</h3>
+      <div id="flexMainContainer">
+        <div id="flexMain">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="flexMain">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+      <div class="circleContainer">
+        <div class="circle"></div>
+      </div>
+      <div class="simulacroContainer">
+        <div id="flexHeader">header</div>
+        <div id="navArticleAsideContainer">
+          <div>nav</div>
+          <div>article</div>
+          <div>aside</div>
+        </div>
+        <div id="flexFooter">footer</div>
+      </div>
+
+      <div id="listaResponsive">
+        <div class="individuallist">
+          <span>Bloque 01</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+            reprehenderit neque id optio nihil vel ad voluptas beatae reiciendis
+            deserunt quisquam nostrum, eligendi ratione modi. Ex, tenetur
+            molestiae. Voluptates, laborum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Consequatur neque illo expedita
+            debitis, aspernatur iure tempore quae eaque possimus aliquid
+            similique itaque accusantium necessitatibus? Quod tempore earum
+            quaerat rerum eos.
+          </p>
+        </div>
+        <div class="individuallist">
+          <span>Bloque 02</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+            reprehenderit neque id optio nihil vel ad voluptas beatae reiciendis
+            deserunt quisquam nostrum, eligendi ratione modi. Ex, tenetur
+            molestiae. Voluptates, laborum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Consequatur neque illo expedita
+            debitis, aspernatur iure tempore quae eaque possimus aliquid
+            similique itaque accusantium necessitatibus? Quod tempore earum
+            quaerat rerum eos.
+          </p>
+        </div>
+        <div class="individuallist">
+          <span>Bloque 03</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+            reprehenderit neque id optio nihil vel ad voluptas beatae reiciendis
+            deserunt quisquam nostrum, eligendi ratione modi. Ex, tenetur
+            molestiae. Voluptates, laborum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Consequatur neque illo expedita
+            debitis, aspernatur iure tempore quae eaque possimus aliquid
+            similique itaque accusantium necessitatibus? Quod tempore earum
+            quaerat rerum eos.
+          </p>
+        </div>
+        <div class="individuallist">
+          <span>Bloque 04</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+            reprehenderit neque id optio nihil vel ad voluptas beatae reiciendis
+            deserunt quisquam nostrum, eligendi ratione modi. Ex, tenetur
+            molestiae. Voluptates, laborum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Consequatur neque illo expedita
+            debitis, aspernatur iure tempore quae eaque possimus aliquid
+            similique itaque accusantium necessitatibus? Quod tempore earum
+            quaerat rerum eos.
+          </p>
+        </div>
+        <div class="individuallist">
+          <span>Bloque 05</span>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
+            reprehenderit neque id optio nihil vel ad voluptas beatae reiciendis
+            deserunt quisquam nostrum, eligendi ratione modi. Ex, tenetur
+            molestiae. Voluptates, laborum. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Consequatur neque illo expedita
+            debitis, aspernatur iure tempore quae eaque possimus aliquid
+            similique itaque accusantium necessitatibus? Quod tempore earum
+            quaerat rerum eos.
+          </p>
+        </div>
+      </div>
+      <div class="calculatorContainer">
+        <input id="display" readonly />
+        <div id="buttonsContainer">
+          <button
+            class="calculatorSpecialSymbols"
+            onclick="appendToDisplay('+')"
+          >
+            +
+          </button>
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+
+          <button
+            class="calculatorSpecialSymbols"
+            onclick="appendToDisplay('-')"
+          >
+            -
+          </button>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+
+          <button
+            class="calculatorSpecialSymbols"
+            onclick="appendToDisplay('*')"
+          >
+            *
+          </button>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+
+          <button
+            class="calculatorSpecialSymbols"
+            onclick="appendToDisplay('/')"
+          >
+            /
+          </button>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculate()">=</button>
+
+          <button class="calculatorSpecialSymbols" onclick="clearDisplay()">
+            C
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>FOOTER</footer>
+    <script src="js/js.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
+  </body>
+</html>
+
+<!-- do a dropdown with flexbox -->
