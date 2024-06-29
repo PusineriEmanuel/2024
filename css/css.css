@@ -372,16 +372,13 @@ input[type="submit"]:hover {
 }
 
 .calculatorContainer {
-  display: flex;
   margin: auto;
+  margin-top: 50px;
   background: rgb(32, 32, 32);
-  width: 15%;
+  width: 300px;
   height: 500px;
   border-radius: 15px;
-  position: relative;
-  flex-wrap: wrap;
 }
-
 #display {
   background: rgb(43, 43, 43);
   height: 100px;
@@ -393,42 +390,36 @@ input[type="submit"]:hover {
   border: 0;
   overflow: hidden;
 }
-.calculatorSymbolsLimitator {
-  width: 100%;
-  display: flex;
+#buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 10px;
 }
-.calculatorSymbols {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#buttonsContainer button {
   border-radius: 100%;
   background: rgb(70, 70, 70);
   height: 60px;
-  width: 20%;
-  margin: auto;
   color: white;
   font-size: 25px;
   border: none;
 }
-.calculatorSymbols:hover {
+#buttonsContainer button:hover {
   background: rgb(100, 100, 100);
 }
-.calculatorSymbols:active {
+#buttonsContainer button:active {
   background: rgb(148, 148, 148);
 }
-
-.calculatorSpecialSymbols {
+#buttonsContainer .calculatorSpecialSymbols {
   background: orange;
 }
-.calculatorSpecialSymbols:nth-child(6) {
-  margin-right: 217px;
-}
-.calculatorSpecialSymbols:hover {
+#buttonsContainer .calculatorSpecialSymbols:hover {
   background: rgb(255, 189, 66);
 }
-.calculatorSpecialSymbols:active {
+#buttonsContainer .calculatorSpecialSymbols:active {
   background: rgb(255, 216, 144);
 }
+
 @media all and (max-width: 640px) {
   #imgContainer a:nth-child(1) {
     transform: rotate(0);

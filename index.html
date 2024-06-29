@@ -265,78 +265,51 @@
       </div>
       <div class="calculatorContainer">
         <input id="display" readonly />
-        <div class="calculatorSymbolsLimitator">
+        <div id="buttonsContainer">
           <button
-            class="calculatorSymbols calculatorSpecialSymbols"
+            class="calculatorSpecialSymbols"
             onclick="appendToDisplay('+')"
           >
             +
           </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('7')">
-            7
-          </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('8')">
-            8
-          </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('9')">
-            9
-          </button>
-        </div>
-        <div class="calculatorSymbolsLimitator">
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+
           <button
-            class="calculatorSymbols calculatorSpecialSymbols"
+            class="calculatorSpecialSymbols"
             onclick="appendToDisplay('-')"
           >
             -
           </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('4')">
-            4
-          </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('5')">
-            5
-          </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('6')">
-            6
-          </button>
-        </div>
-        <div class="calculatorSymbolsLimitator">
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+
           <button
-            class="calculatorSymbols calculatorSpecialSymbols"
+            class="calculatorSpecialSymbols"
             onclick="appendToDisplay('*')"
           >
             *
           </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('1')">
-            1
-          </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('2')">
-            2
-          </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('3')">
-            3
-          </button>
-        </div>
-        <div class="calculatorSymbolsLimitator">
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+
           <button
-            class="calculatorSymbols calculatorSpecialSymbols"
+            class="calculatorSpecialSymbols"
             onclick="appendToDisplay('/')"
           >
             /
           </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('0')">
-            0
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculate()">=</button>
+
+          <button class="calculatorSpecialSymbols" onclick="clearDisplay()">
+            C
           </button>
-          <button class="calculatorSymbols" onclick="appendToDisplay('.')">
-            .
-          </button>
-          <button class="calculatorSymbols" onclick="calculate()">=</button>
         </div>
-        <button
-          class="calculatorSymbols calculatorSpecialSymbols"
-          onclick="clearDisplay()"
-        >
-          C
-        </button>
       </div>
     </section>
     <footer>FOOTER</footer>
